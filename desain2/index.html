@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah & Michael's Wedding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fliplib@1.0.0/dist/flip.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f3e8e8',
+                        secondary: '#d4a5a5',
+                        accent: '#b5838d',
+                    },
+                    fontFamily: {
+                        script: ['"Alex Brush"', 'cursive'],
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['"Montserrat"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap');
+        
+        .flipbook-container {
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+        }
+        
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        
+        .floral-divider {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f3e8e8' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+        }
+    </style>
+</head>
+<body class="bg-primary font-body text-gray-700">
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="lang-en" class="bg-white px-3 py-1 rounded-l-full shadow-md border border-gray-200 font-medium">EN</button>
+        <button id="lang-id" class="bg-white px-3 py-1 rounded-r-full shadow-md border border-gray-200 font-medium">ID</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('http://static.photos/vintage/1200x630/42');">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-script text-white mb-2" data-i18n="saveTheDate">Save the Date</h1>
+            <h2 class="text-5xl md:text-8xl font-heading text-white mb-8" data-aos="fade-up">Sarah & Michael</h2>
+            <p class="text-xl md:text-2xl text-white mb-8" data-i18n="weddingDate">June 15, 2024</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#couple" class="px-6 py-2 bg-white text-accent rounded-full font-medium hover:bg-accent hover:text-white transition duration-300" data-i18n="ourStory">Our Story</a>
+                <a href="#details" class="px-6 py-2 border-2 border-white text-white rounded-full font-medium hover:bg-white hover:text-accent transition duration-300" data-i18n="eventDetails">Event Details</a>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0">
+            <div class="floral-divider"></div>
+        </div>
+    </section>
+
+    <!-- Couple Section -->
+    <section id="couple" class="py-20 bg-primary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-heading text-center mb-16" data-i18n="theCouple">The Couple</h2>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12 mb-20">
+                <div class="text-center" data-aos="fade-right">
+                    <div class="w-64 h-64 rounded-full overflow-hidden mx-auto mb-6 shadow-lg">
+                        <img src="http://static.photos/people/640x360/1" alt="Bride" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-3xl font-heading mb-2">Sarah Johnson</h3>
+                    <p class="text-gray-600 mb-2" data-i18n="daughterOf">Daughter of</p>
+                    <p class="text-gray-700">Robert & Elizabeth Johnson</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-left">
+                    <div class="w-64 h-64 rounded-full overflow-hidden mx-auto mb-6 shadow-lg">
+                        <img src="http://static.photos/people/640x360/2" alt="Groom" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-3xl font-heading mb-2">Michael Williams</h3>
+                    <p class="text-gray-600 mb-2" data-i18n="sonOf">Son of</p>
+                    <p class="text-gray-700">David & Margaret Williams</p>
+                </div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+                <p class="text-lg mb-8" data-i18n="coupleStory">
+                    Sarah and Michael met in college during a study abroad program in Paris. Their love story began over croissants and coffee at a small café near the Sorbonne. After five years of adventures together, Michael proposed during a sunset picnic at their favorite spot in Central Park.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <i class="fas fa-heart text-accent text-2xl"></i>
+                    <i class="fas fa-heart text-accent text-2xl"></i>
+                    <i class="fas fa-heart text-accent text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details -->
+    <section id="details" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-heading text-center mb-16" data-i18n="eventDetails">Event Details</h2>
+            
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                <div class="bg-primary p-8 rounded-lg shadow-md" data-aos="fade-right">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-church text-4xl text-accent mb-4"></i>
+                        <h3 class="text-2xl font-heading mb-2" data-i18n="ceremony">Ceremony</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <p><i class="fas fa-calendar-day text-accent mr-2"></i> <span data-i18n="ceremonyDate">June 15, 2024 at 2:00 PM</span></p>
+                        <p><i class="fas fa-map-marker-alt text-accent mr-2"></i> <span>St. Mary's Cathedral, 123 Main Street, New York</span></p>
+                        <p class="text-sm text-gray-600" data-i18n="ceremonyNote">* Please arrive 30 minutes before the ceremony begins</p>
+                    </div>
+                </div>
+                
+                <div class="bg-primary p-8 rounded-lg shadow-md" data-aos="fade-left">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-glass-cheers text-4xl text-accent mb-4"></i>
+                        <h3 class="text-2xl font-heading mb-2" data-i18n="reception">Reception</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <p><i class="fas fa-calendar-day text-accent mr-2"></i> <span data-i18n="receptionDate">June 15, 2024 at 5:00 PM</span></p>
+                        <p><i class="fas fa-map-marker-alt text-accent mr-2"></i> <span>The Grand Ballroom, 456 Park Avenue, New York</span></p>
+                        <p class="text-sm text-gray-600" data-i18n="receptionNote">* Cocktail hour begins at 5:00 PM, dinner at 6:30 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-2xl mx-auto mt-16 bg-primary p-8 rounded-lg shadow-md" data-aos="fade-up">
+                <div class="text-center mb-6">
+                    <i class="fas fa-tshirt text-4xl text-accent mb-4"></i>
+                    <h3 class="text-2xl font-heading mb-2" data-i18n="dressCode">Dress Code</h3>
+                </div>
+                <p class="text-center" data-i18n="dressCodeDetails">
+                    Semi-formal to formal attire. Ladies: Cocktail dresses or formal gowns. Gentlemen: Suits or tuxedos. Please avoid wearing white.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="py-20 bg-secondary text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-heading text-center mb-16" data-i18n="rsvpTitle">RSVP</h2>
+            
+            <div class="max-w-3xl mx-auto bg-white text-gray-800 rounded-lg shadow-xl overflow-hidden">
+                <div class="p-8">
+                    <form id="rsvpForm">
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium" data-i18n="fullName">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 font-medium" data-i18n="email">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                            <div>
+                                <label for="guests" class="block mb-2 font-medium" data-i18n="numberOfGuests">Number of Guests</label>
+                                <select id="guests" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="attending" class="block mb-2 font-medium" data-i18n="willYouAttend">Will you attend?</label>
+                                <select id="attending" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <option value="yes" data-i18n="yes">Yes, I'll be there</option>
+                                    <option value="no" data-i18n="no">No, I can't come</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 font-medium" data-i18n="message">Message for the couple</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-accent text-white py-3 rounded-lg font-medium hover:bg-opacity-90 transition duration-300" data-i18n="submitRsvp">Submit RSVP</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Registry -->
+    <section id="gifts" class="py-20 bg-primary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-heading text-center mb-16" data-i18n="giftRegistry">Gift Registry</h2>
+            
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-right">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-gift text-4xl text-accent mb-4"></i>
+                        <h3 class="text-2xl font-heading mb-2" data-i18n="physicalGifts">Physical Gifts</h3>
+                    </div>
+                    <p class="mb-4" data-i18n="giftRegistryNote">We're registered at the following stores:</p>
+                    <ul class="space-y-2 mb-6">
+                        <li><i class="fas fa-store text-accent mr-2"></i> Bed Bath & Beyond</li>
+                        <li><i class="fas fa-store text-accent mr-2"></i> Crate & Barrel</li>
+                        <li><i class="fas fa-store text-accent mr-2"></i> Williams Sonoma</li>
+                    </ul>
+                    <p class="text-sm text-gray-600" data-i18n="giftRegistryAddress">Gifts can be shipped to: 789 Gift Lane, New York, NY 10001</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-left">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-money-bill-wave text-4xl text-accent mb-4"></i>
+                        <h3 class="text-2xl font-heading mb-2" data-i18n="monetaryGifts">Monetary Gifts</h3>
+                    </div>
+                    <p class="mb-4" data-i18n="monetaryGiftsNote">For your convenience, we also accept monetary gifts:</p>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-medium mb-2" data-i18n="bankTransfer">Bank Transfer</h4>
+                        <p class="text-sm bg-gray-100 p-3 rounded-lg">
+                            Bank: Chase Bank<br>
+                            Account Name: Sarah Johnson & Michael Williams<br>
+                            Account Number: 1234567890<br>
+                            Routing Number: 021000021
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-medium mb-2" data-i18n="ewallet">E-Wallet</h4>
+                        <div class="flex space-x-4 mb-4">
+                            <button class="flex items-center justify-center bg-blue-500 text-white px-4 py-2 rounded-lg">
+                                <i class="fab fa-paypal mr-2"></i> PayPal
+                            </button>
+                            <button class="flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded-lg">
+                                <i class="fas fa-mobile-alt mr-2"></i> Venmo
+                            </button>
+                        </div>
+                        <div class="text-center">
+                            <p class="mb-2" data-i18n="scanQR">Or scan this QR code:</p>
+                            <img src="http://static.photos/minimal/200x200/1" alt="QR Code" class="w-32 h-32 mx-auto border border-gray-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-heading text-center mb-16" data-i18n="photoGallery">Photo Gallery</h2>
+            
+            <div class="flipbook-container">
+                <!-- Flipbook will be initialized here -->
+                <div id="flipbook" class="w-full h-full">
+                    <div class="h-full bg-cover bg-center" style="background-image: url('http://static.photos/people/1024x576/1')"></div>
+                    <div class="h-full bg-cover bg-center" style="background-image: url('http://static.photos/people/1024x576/2')"></div>
+                    <div class="h-full bg-cover bg-center" style="background-image: url('http://static.photos/people/1024x576/3')"></div>
+                    <div class="h-full bg-cover bg-center" style="background-image: url('http://static.photos/people/1024x576/4')"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-script mb-6">Sarah & Michael</h2>
+            <p class="mb-8" data-i18n="footerDate">June 15, 2024</p>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-white hover:text-secondary transition duration-300">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition duration-300">
+                    <i class="fab fa-facebook text-2xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-secondary transition duration-300">
+                    <i class="fab fa-pinterest text-2xl"></i>
+                </a>
+            </div>
+            
+            <p class="text-sm" data-i18n="footerNote">We can't wait to celebrate with you!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Language switching functionality
+        const translations = {
+            en: {
+                saveTheDate: "Save the Date",
+                weddingDate: "June 15, 2024",
+                ourStory: "Our Story",
+                eventDetails: "Event Details",
+                theCouple: "The Couple",
+                daughterOf: "Daughter of",
+                sonOf: "Son of",
+                coupleStory: "Sarah and Michael met in college during a study abroad program in Paris. Their love story began over croissants and coffee at a small café near the Sorbonne. After five years of adventures together, Michael proposed during a sunset picnic at their favorite spot in Central Park.",
+                ceremony: "Ceremony",
+                ceremonyDate: "June 15, 2024 at 2:00 PM",
+                ceremonyNote: "* Please arrive 30 minutes before the ceremony begins",
+                reception: "Reception",
+                receptionDate: "June 15, 2024 at 5:00 PM",
+                receptionNote: "* Cocktail hour begins at 5:00 PM, dinner at 6:30 PM",
+                dressCode: "Dress Code",
+                dressCodeDetails: "Semi-formal to formal attire. Ladies: Cocktail dresses or formal gowns. Gentlemen: Suits or tuxedos. Please avoid wearing white.",
+                rsvpTitle: "RSVP",
+                fullName: "Full Name",
+                email: "Email",
+                numberOfGuests: "Number of Guests",
+                willYouAttend: "Will you attend?",
+                yes: "Yes, I'll be there",
+                no: "No, I can't come",
+                message: "Message for the couple",
+                submitRsvp: "Submit RSVP",
+                giftRegistry: "Gift Registry",
+                physicalGifts: "Physical Gifts",
+                giftRegistryNote: "We're registered at the following stores:",
+                giftRegistryAddress: "Gifts can be shipped to: 789 Gift Lane, New York, NY 10001",
+                monetaryGifts: "Monetary Gifts",
+                monetaryGiftsNote: "For your convenience, we also accept monetary gifts:",
+                bankTransfer: "Bank Transfer",
+                ewallet: "E-Wallet",
+                scanQR: "Or scan this QR code:",
+                photoGallery: "Photo Gallery",
+                footerDate: "June 15, 2024",
+                footerNote: "We can't wait to celebrate with you!"
+            },
+            id: {
+                saveTheDate: "Simpan Tanggal",
+                weddingDate: "15 Juni 2024",
+                ourStory: "Cerita Kami",
+                eventDetails: "Detail Acara",
+                theCouple: "Pasangan",
+                daughterOf: "Putri dari",
+                sonOf: "Putra dari",
+                coupleStory: "Sarah dan Michael bertemu di perguruan tinggi selama program belajar di luar negeri di Paris. Kisah cinta mereka dimulai dengan croissant dan kopi di sebuah kafe kecil dekat Sorbonne. Setelah lima tahun petualangan bersama, Michael melamar selama piknik saat matahari terbenam di tempat favorit mereka di Central Park.",
+                ceremony: "Upacara",
+                ceremonyDate: "15 Juni 2024 pukul 14:00",
+                ceremonyNote: "* Harap datang 30 menit sebelum upacara dimulai",
+                reception: "Resepsi",
+                receptionDate: "15 Juni 2024 pukul 17:00",
+                receptionNote: "* Jam koktail dimulai pukul 17:00, makan malam pukul 18:30",
+                dressCode: "Kode Berpakaian",
+                dressCodeDetails: "Pakaian semi-formal hingga formal. Wanita: Gaun koktail atau gaun formal. Pria: Setelan jas atau tuxedo. Harap hindari memakai warna putih.",
+                rsvpTitle: "Konfirmasi Kehadiran",
+                fullName: "Nama Lengkap",
+                email: "Email",
+                numberOfGuests: "Jumlah Tamu",
+                willYouAttend: "Apakah Anda akan hadir?",
+                yes: "Ya, saya akan hadir",
+                no: "Tidak, saya tidak bisa datang",
+                message: "Pesan untuk pasangan",
+                submitRsvp: "Kirim Konfirmasi",
+                giftRegistry: "Daftar Hadiah",
+                physicalGifts: "Hadiah Fisik",
+                giftRegistryNote: "Kami terdaftar di toko-toko berikut:",
+                giftRegistryAddress: "Hadiah dapat dikirim ke: 789 Gift Lane, New York, NY 10001",
+                monetaryGifts: "Hadiah Uang",
+                monetaryGiftsNote: "Untuk kenyamanan Anda, kami juga menerima hadiah uang:",
+                bankTransfer: "Transfer Bank",
+                ewallet: "Dompet Digital",
+                scanQR: "Atau scan kode QR ini:",
+                photoGallery: "Galeri Foto",
+                footerDate: "15 Juni 2024",
+                footerNote: "Kami tidak sabar untuk merayakan bersama Anda!"
+            }
+        };
+        
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+        
+        document.getElementById('lang-en').addEventListener('click', () => changeLanguage('en'));
+        document.getElementById('lang-id').addEventListener('click', () => changeLanguage('id'));
+        
+        // Initialize with English
+        changeLanguage('en');
+        
+        // Initialize Flip
+        document.addEventListener('DOMContentLoaded', function() {
+            const flipbook = document.getElementById('flipbook');
+            if (flipbook) {
+                new Flip({
+                    node: flipbook,
+                    pages: Array.from(flipbook.children),
+                    pageWidth: 1024,
+                    pageHeight: 576,
+                    zoom: 0.8
+                });
+            }
+        });
+        
+        // Form submission
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your RSVP! We look forward to seeing you.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
