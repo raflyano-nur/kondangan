@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Sarah & Ryan</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .script-font {
+            font-family: 'Dancing Script', cursive;
+        }
+        .bank-card {
+            transition: all 0.3s ease;
+        }
+        .bank-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .copy-btn {
+            transition: all 0.2s ease;
+        }
+        .copy-btn:hover {
+            background-color: #fdf2f8;
+        }
+        .copy-btn.copied {
+            background-color: #ec4899;
+            color: white;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-rose-50">
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 to-rose-200">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="text-center z-10 text-white px-4">
+            <h1 class="script-font text-5xl md:text-7xl mb-4">Sarah & Ryan</h1>
+            <p class="text-xl md:text-2xl mb-8">Kami Akan Menikah</p>
+            <p class="text-lg mb-12">12 • 12 • 2023</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#couple" class="bg-white text-rose-600 px-6 py-3 rounded-full font-medium hover:bg-rose-50 transition duration-300">
+                    <i class="fas fa-heart mr-2"></i>Kenalan Yuk
+                </a>
+                <a href="#transfer" class="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-rose-600 transition duration-300">
+                    <i class="fas fa-gift mr-2"></i>Kirim Hadiah
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#couple" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Couple Section -->
+    <section id="couple" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="script-font text-4xl md:text-5xl text-rose-600 mb-4">Mempelai</h2>
+                <div class="w-24 h-1 bg-rose-400 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-12 md:space-y-0 md:space-x-16">
+                <!-- Bride -->
+                <div class="text-center max-w-sm">
+                    <div class="rounded-full overflow-hidden w-64 h-64 mx-auto mb-6 border-8 border-rose-100 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Mempelai Wanita" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="script-font text-3xl text-rose-600 mb-2">Sarah Jasmine</h3>
+                    <p class="text-gray-600 mb-4">Putri dari Bapak Budi & Ibu Sari</p>
+                    <div class="flex justify-center space-x-4 text-rose-500">
+                        <a href="#" class="hover:text-rose-700"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-rose-700"><i class="fab fa-facebook text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Heart Icon -->
+                <div class="hidden md:block">
+                    <i class="fas fa-heart text-6xl text-rose-400 animate-pulse"></i>
+                </div>
+                
+                <!-- Groom -->
+                <div class="text-center max-w-sm">
+                    <div class="rounded-full overflow-hidden w-64 h-64 mx-auto mb-6 border-8 border-rose-100 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Mempelai Pria" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="script-font text-3xl text-rose-600 mb-2">Ryan Pratama</h3>
+                    <p class="text-gray-600 mb-4">Putra dari Bapak Joko & Ibu Rini</p>
+                    <div class="flex justify-center space-x-4 text-rose-500">
+                        <a href="#" class="hover:text-rose-700"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-rose-700"><i class="fab fa-facebook text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transfer Online Section -->
+    <section id="transfer" class="py-20 bg-rose-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="script-font text-4xl md:text-5xl text-rose-600 mb-4">Kirim Hadiah</h2>
+                <div class="w-24 h-1 bg-rose-400 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">Kehadiran Anda sudah merupakan kebahagiaan bagi kami. Namun jika Anda ingin memberikan tanda kasih, berikut informasi rekening kami.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Bank Transfer Options -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                    <!-- BCA -->
+                    <div class="bg-white rounded-xl shadow-md p-6 bank-card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-blue-600 font-bold">BCA</span>
+                            </div>
+                            <h3 class="text-xl font-semibold">Bank Central Asia (BCA)</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="text-gray-500 text-sm">Nomor Rekening</p>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-lg font-mono font-semibold">1234 5678 9012</p>
+                                    <button class="copy-btn text-rose-500 px-3 py-1 rounded-lg border border-rose-200 text-sm" data-copy="123456789012">
+                                        <i class="far fa-copy mr-1"></i> Salin
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Atas Nama</p>
+                                <p class="text-lg font-semibold">Sarah Jasmine</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mandiri -->
+                    <div class="bg-white rounded-xl shadow-md p-6 bank-card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-red-600 font-bold">MDR</span>
+                            </div>
+                            <h3 class="text-xl font-semibold">Bank Mandiri</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="text-gray-500 text-sm">Nomor Rekening</p>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-lg font-mono font-semibold">9876 5432 1098</p>
+                                    <button class="copy-btn text-rose-500 px-3 py-1 rounded-lg border border-rose-200 text-sm" data-copy="987654321098">
+                                        <i class="far fa-copy mr-1"></i> Salin
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Atas Nama</p>
+                                <p class="text-lg font-semibold">Ryan Pratama</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- BNI -->
+                    <div class="bg-white rounded-xl shadow-md p-6 bank-card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-green-600 font-bold">BNI</span>
+                            </div>
+                            <h3 class="text-xl font-semibold">Bank Negara Indonesia (BNI)</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="text-gray-500 text-sm">Nomor Rekening</p>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-lg font-mono font-semibold">5678 9012 3456</p>
+                                    <button class="copy-btn text-rose-500 px-3 py-1 rounded-lg border border-rose-200 text-sm" data-copy="567890123456">
+                                        <i class="far fa-copy mr-1"></i> Salin
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Atas Nama</p>
+                                <p class="text-lg font-semibold">Sarah Jasmine</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- BRI -->
+                    <div class="bg-white rounded-xl shadow-md p-6 bank-card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-purple-600 font-bold">BRI</span>
+                            </div>
+                            <h3 class="text-xl font-semibold">Bank Rakyat Indonesia (BRI)</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="text-gray-500 text-sm">Nomor Rekening</p>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-lg font-mono font-semibold">3456 7890 1234</p>
+                                    <button class="copy-btn text-rose-500 px-3 py-1 rounded-lg border border-rose-200 text-sm" data-copy="345678901234">
+                                        <i class="far fa-copy mr-1"></i> Salin
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Atas Nama</p>
+                                <p class="text-lg font-semibold">Ryan Pratama</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- E-Wallet Options -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold text-center mb-8 text-rose-700">E-Wallet</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- OVO -->
+                        <div class="bg-white rounded-xl shadow-md p-6 bank-card">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-purple-600 font-bold text-sm">OVO</span>
+                                </div>
+                                <h3 class="text-lg font-semibold">OVO</h3>
+                            </div>
+                            <div class="space-y-3">
+                                <div>
+                                    <p class="text-gray-500 text-sm">Nomor Telepon</p>
+                                    <div class="flex justify-between items-center">
+                                        <p class="text-lg font-mono font-semibold">0812 3456 7890</p>
+                                        <button class="copy-btn text-rose-500 px-3 py-1 rounded-lg border border-rose-200 text-sm" data-copy="081234567890">
+                                            <i class="far fa-copy mr-1"></i> Salin
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Atas Nama</p>
+                                    <p class="text-lg font-semibold">Sarah Jasmine</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- GoPay -->
+                        <div class="bg-white rounded-xl shadow-md p-6 bank-card">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-green-600 font-bold text-sm">GOPAY</span>
+                                </div>
+                                <h3 class="text-lg font-semibold">GoPay</h3>
+                            </div>
+                            <div class="space-y-3">
+                                <div>
+                                    <p class="text-gray-500 text-sm">Nomor Telepon</p>
+                                    <div class="flex justify-between items-center">
+                                        <p class="text-lg font-mono font-semibold">0813 4567 8901</p>
+                                        <button class="copy-btn text-rose-500 px-3 py-1 rounded-lg border border-rose-200 text-sm" data-copy="081345678901">
+                                            <i class="far fa-copy mr-1"></i> Salin
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Atas Nama</p>
+                                    <p class="text-lg font-semibold">Ryan Pratama</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Dana -->
+                        <div class="bg-white rounded-xl shadow-md p-6 bank-card">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-blue-600 font-bold text-sm">DANA</span>
+                                </div>
+                                <h3 class="text-lg font-semibold">DANA</h3>
+                            </div>
+                            <div class="space-y-3">
+                                <div>
+                                    <p class="text-gray-500 text-sm">Nomor Telepon</p>
+                                    <div class="flex justify-between items-center">
+                                        <p class="text-lg font-mono font-semibold">0814 5678 9012</p>
+                                        <button class="copy-btn text-rose-500 px-3 py-1 rounded-lg border border-rose-200 text-sm" data-copy="081456789012">
+                                            <i class="far fa-copy mr-1"></i> Salin
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Atas Nama</p>
+                                    <p class="text-lg font-semibold">Sarah Jasmine</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transfer Instructions -->
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h3 class="text-2xl font-semibold text-center mb-6 text-rose-700">Panduan Transfer</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4 flex items-center">
+                                <i class="fas fa-mobile-alt text-rose-500 mr-2"></i> Transfer via Mobile Banking
+                            </h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-600">
+                                <li>Buka aplikasi mobile banking Anda</li>
+                                <li>Pilih menu transfer</li>
+                                <li>Masukkan nomor rekening yang dituju</li>
+                                <li>Masukkan nominal transfer</li>
+                                <li>Konfirmasi dan masukkan PIN/MPIN</li>
+                                <li>Simpan bukti transfer</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4 flex items-center">
+                                <i class="fas fa-exchange-alt text-rose-500 mr-2"></i> Transfer via E-Wallet
+                            </h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-600">
+                                <li>Buka aplikasi e-wallet Anda</li>
+                                <li>Pilih menu kirim uang/transfer</li>
+                                <li>Masukkan nomor telepon penerima</li>
+                                <li>Masukkan nominal transfer</li>
+                                <li>Konfirmasi dan masukkan PIN</li>
+                                <li>Simpan bukti transfer</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-4 bg-rose-50 rounded-lg border border-rose-200">
+                        <p class="text-rose-700 flex items-start">
+                            <i class="fas fa-info-circle text-rose-500 mr-2 mt-1"></i>
+                            <span>Setelah melakukan transfer, Anda dapat mengirimkan bukti transfer melalui WhatsApp ke nomor <strong>0812-3456-7890</strong> atau melalui formulir konfirmasi di bawah ini.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Form -->
+    <section id="confirmation" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="script-font text-4xl md:text-5xl text-rose-600 mb-4">Konfirmasi Transfer</h2>
+                <div class="w-24 h-1 bg-rose-400 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">Silakan isi formulir ini setelah melakukan transfer untuk memudahkan kami mencatatnya.</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto bg-rose-50 rounded-2xl shadow-lg p-8">
+                <form id="transfer-confirmation-form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="sender-name">Nama Pengirim</label>
+                            <input type="text" id="sender-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500" placeholder="Nama lengkap pengirim" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="transfer-date">Tanggal Transfer</label>
+                            <input type="date" id="transfer-date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="transfer-amount">Jumlah Transfer</label>
+                            <input type="number" id="transfer-amount" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500" placeholder="Contoh: 500000" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="transfer-method">Metode Transfer</label>
+                            <select id="transfer-method" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500" required>
+                                <option value="">Pilih metode</option>
+                                <option value="bca">BCA</option>
+                                <option value="mandiri">Mandiri</option>
+                                <option value="bni">BNI</option>
+                                <option value="bri">BRI</option>
+                                <option value="ovo">OVO</option>
+                                <option value="gopay">GoPay</option>
+                                <option value="dana">DANA</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-gray-700 mb-2" for="proof-method">Cara Mengirim Bukti Transfer</label>
+                            <div class="dropdown relative">
+                                <select id="proof-method" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500" required>
+                                    <option value="">Pilih cara mengirim bukti</option>
+                                    <option value="whatsapp">WhatsApp (0812-3456-7890)</option>
+                                    <option value="email">Email (sarah-ryan@pernikahan.com)</option>
+                                    <option value="other">Cara lain (akan dihubungi)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-gray-700 mb-2" for="sender-message">Pesan untuk Mempelai</label>
+                            <textarea id="sender-message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500" placeholder="Tuliskan pesan atau doa untuk mempelai"></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <button type="submit" class="bg-rose-600 text-white px-8 py-3 rounded-full font-medium hover:bg-rose-700 transition duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i>Kirim Konfirmasi
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rose-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="script-font text-3xl mb-6">Sarah & Ryan</h3>
+            <p class="mb-6 max-w-2xl mx-auto">Terima kasih atas doa, restu, dan tanda kasih yang telah diberikan. Kehadiran Anda merupakan kebahagiaan tersendiri bagi kami.</p>
+            
+            <div class="flex justify-center space-x-6 mb-8 text-2xl">
+                <a href="#" class="hover:text-rose-300 transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-rose-300 transition duration-300"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-rose-300 transition duration-300"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <p class="text-rose-300">Dibuat dengan <i class="fas fa-heart text-red-400 mx-1"></i> untuk hari bahagia kami</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Copy to clipboard functionality
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const textToCopy = this.getAttribute('data-copy');
+                
+                // Create a temporary textarea element
+                const textarea = document.createElement('textarea');
+                textarea.value = textToCopy;
+                textarea.setAttribute('readonly', '');
+                textarea.style.position = 'absolute';
+                textarea.style.left = '-9999px';
+                document.body.appendChild(textarea);
+                
+                // Select and copy the text
+                textarea.select();
+                textarea.setSelectionRange(0, 99999); // For mobile devices
+                
+                try {
+                    const successful = document.execCommand('copy');
+                    if (successful) {
+                        // Change button text temporarily
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check mr-1"></i> Disalin';
+                        this.classList.add('copied');
+                        
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                            this.classList.remove('copied');
+                        }, 2000);
+                    }
+                } catch (err) {
+                    console.error('Failed to copy: ', err);
+                }
+                
+                // Remove the temporary textarea
+                document.body.removeChild(textarea);
+            });
+        });
+        
+        // Form submission
+        document.getElementById('transfer-confirmation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to a server
+            // For demo purposes, we'll just show an alert
+            alert('Terima kasih! Konfirmasi transfer Anda telah berhasil dikirim.');
+            this.reset();
+        });
+        
+        // Set minimum date for transfer date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('transfer-date').setAttribute('min', today);
+    </script>
+</body>
+</html>
